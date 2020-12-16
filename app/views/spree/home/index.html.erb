@@ -1,0 +1,53 @@
+<% @body_id = 'home' %>
+
+<div class="homepage-hero-image mb-3 position-relative">
+  <img class="lazyload hero-image position-absolute"
+    data-src="<%= asset_path('homepage/main_banner.jpg') %>"
+    data-srcset="<%= image_source_set('homepage/main_banner') %>"
+    alt="<%= Spree.t('homepage.summer_collection')%>" />
+
+  <div class="hero-content">
+    <div class="homepage-hero-image-text mb-2 mx-auto pb-3 pb-md-4">
+      <%= Spree.t('homepage.Grand_Launching') %>
+    </div>
+    <div>
+      <%= link_to Spree.t('homepage.Shop_Now'), spree.products_path, class: 'btn btn-primary spree-btn px-5' %>
+    </div>
+  </div>
+</div>
+
+<div data-product-carousel data-product-carousel-taxon-id='bestsellers' class="my-3"></div>
+
+<div class="homepage-fashion-trends-box mb-3">
+  <div class="text-center">
+    <div class="homepage-fashion-trends-box-summer-text mb-1"><%= Spree.t('homepage.KONNICHIWA') %></div>
+    <div class="homepage-fashion-trends-box-fashion-trends-text mb-2"><%= Spree.t('homepage.Electronic_Trends') %></div>
+    <div class="homepage-fashion-trends-box-description-text text-center mb-3">
+      WEREEEEE RAWR
+</div>
+
+
+<div data-product-carousel data-product-carousel-taxon-id='trending' class="mb-3"></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+        <div class="homepage-bottom-box text-center mb-3">
+          <img class="w-100 lazyload"
+            data-src="<%= asset_path('homepage/promo_banner_left.jpg') %>"
+            data-srcset="<%= image_source_set('homepage/promo_banner_left') %>"
+            alt="<%= Spree.t('homepage.new_collection')%>" />
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <div class="homepage-bottom-box text-center mb-3">
+          <img class="w-100 lazyload"
+            data-src="<%= asset_path('homepage/promo_banner_right.jpg') %>"
+            data-srcset="<%= image_source_set('homepage/promo_banner_right') %>"
+            alt="<%= Spree.t('homepage.new_collection')%>" />
+            </div>
+      </div>
+
+  </div>
+</div>

@@ -1,0 +1,464 @@
+=> Booting Puma
+=> Rails 6.0.3.4 application starting in development 
+=> Run `rails server --help` for more startup options
+[WARNING] You are not setting Devise.secret_key within your application!
+You must set this in config/initializers/devise.rb. Here's an example:
+ 
+Devise.secret_key = "6b04f6e00a2f316eb3a6fece1068abc265cfc2a447dc91ded165fae76697e0f62af648c18401e843d19a18e25aa4660c1fb6"
+*** SIGUSR2 not implemented, signal based restart unavailable!
+*** SIGUSR1 not implemented, signal based restart unavailable!
+*** SIGHUP not implemented, signal based logs reopening unavailable!
+Puma starting in single mode...
+* Version 4.3.6 (ruby 2.6.6-p146), codename: Mysterious Traveller
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://[::1]:3000
+* Listening on tcp://127.0.0.1:3000
+Use Ctrl-C to stop
+Started GET "/admin/taxonomies" for 127.0.0.1 at 2020-10-15 02:23:36 +0700
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (22.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Spree::Admin::TaxonomiesController#index as HTML
+  [1m[36mSpree::Preference Load (0.6ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/backend_configuration/locale' LIMIT 1[0m
+  [1m[36mSpree::User Load (0.9ms)[0m  [1m[34mSELECT `spree_users`.* FROM `spree_users` WHERE `spree_users`.`deleted_at` IS NULL AND `spree_users`.`id` = 2 ORDER BY `spree_users`.`id` ASC LIMIT 1[0m
+  [1m[36mSpree::Role Load (1.0ms)[0m  [1m[34mSELECT `spree_roles`.* FROM `spree_roles` INNER JOIN `spree_role_users` ON `spree_roles`.`id` = `spree_role_users`.`role_id` WHERE `spree_role_users`.`user_id` = 2[0m
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_backend-4.1.10/app/views/spree/admin/taxonomies/index.html.erb within spree/layouts/admin
+  [1m[36mSpree::Taxonomy Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM `spree_taxonomies` LIMIT 1[0m
+  [1m[36mSpree::Taxonomy Load (3.3ms)[0m  [1m[34mSELECT `spree_taxonomies`.* FROM `spree_taxonomies` ORDER BY spree_taxonomies.position, spree_taxonomies.created_at[0m
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_backend-4.1.10/app/views/spree/admin/taxonomies/_list.html.erb (Duration: 19.4ms | Allocations: 5826)
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_backend-4.1.10/app/views/spree/admin/taxonomies/index.html.erb within spree/layouts/admin (Duration: 102.6ms | Allocations: 10189)
+  [1m[36mSpree::Preference Load (0.8ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/admin_path' LIMIT 1[0m
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_core-4.1.10/app/views/spree/shared/_paths.html.erb (Duration: 6.3ms | Allocations: 2302)
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_backend-4.1.10/app/views/spree/admin/shared/_translations.html.erb (Duration: 11.1ms | Allocations: 2284)
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_backend-4.1.10/app/views/spree/admin/shared/_head.html.erb (Duration: 31462.8ms | Allocations: 3123172)
+[1;32mDeface:[0m 1 overrides found for 'spree/admin/shared/_header'
+[1;32mDeface:[0m 'auth_admin_login_navigation_bar' matched 0 times with '[data-hook='admin_login_navigation_bar'], #admin_login_navigation_bar[data-hook]'
+  [1m[36mSpree::Preference Load (1.6ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/admin_interface_logo' LIMIT 1[0m
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_backend-4.1.10/app/views/spree/admin/shared/_account_nav.html.erb (Duration: 5.3ms | Allocations: 1514)
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_backend-4.1.10/app/views/spree/admin/shared/_header.html.erb (Duration: 47.7ms | Allocations: 5956)
+  [1m[36mSpree::Preference Load (0.7ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/currency' LIMIT 1[0m
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_backend-4.1.10/app/views/spree/admin/shared/sub_menu/_returns.html.erb (Duration: 38.8ms | Allocations: 8827)
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_backend-4.1.10/app/views/spree/admin/shared/sub_menu/_product.html.erb (Duration: 422.3ms | Allocations: 27686)
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_backend-4.1.10/app/views/spree/admin/shared/sub_menu/_promotion.html.erb (Duration: 13.2ms | Allocations: 1646)
+  [1m[36mSpree::Store Load (0.8ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE (url like '%127.0.0.1%') ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  [1m[36mSpree::Store Load (0.8ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE `spree_stores`.`default` = TRUE ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  [1m[36mSpree::Preference Load (0.7ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/default_country_id' LIMIT 1[0m
+  [1m[36mSpree::Country Load (0.6ms)[0m  [1m[34mSELECT `spree_countries`.* FROM `spree_countries` WHERE `spree_countries`.`id` IS NULL LIMIT 1[0m
+  [1m[36mSpree::Country Load (0.6ms)[0m  [1m[34mSELECT `spree_countries`.* FROM `spree_countries` ORDER BY `spree_countries`.`id` ASC LIMIT 1[0m
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_backend-4.1.10/app/views/spree/admin/shared/sub_menu/_configuration.html.erb (Duration: 367.3ms | Allocations: 38757)
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_backend-4.1.10/app/views/spree/admin/shared/_main_menu.html.erb (Duration: 1769.9ms | Allocations: 128167)
+  [1m[36mSpree::Preference Load (0.6ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/admin_show_version' LIMIT 1[0m
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_backend-4.1.10/app/views/spree/admin/shared/_version.html.erb (Duration: 5.5ms | Allocations: 2056)
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_backend-4.1.10/app/views/spree/admin/shared/_content_header.html.erb (Duration: 2.5ms | Allocations: 463)
+Completed 200 OK in 34845ms (Views: 33322.7ms | ActiveRecord: 364.8ms | Allocations: 3395676)
+
+
+Started GET "/t/tupperware" for ::1 at 2020-10-15 02:25:43 +0700
+Started GET "/t/tupperware" for ::1 at 2020-10-15 02:25:44 +0700
+Processing by Spree::TaxonsController#show as HTML
+  Parameters: {"id"=>"tupperware"}
+  [1m[36mSpree::Order Exists? (18.4ms)[0m  [1m[34mSELECT 1 AS one FROM `spree_orders` WHERE `spree_orders`.`token` = 'W7qp1lXkxvR5hARTYill0A1602703545435' LIMIT 1[0m
+  [1m[36mSpree::Preference Load (1.3ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/locale' LIMIT 1[0m
+  [1m[36mSpree::Taxon Load (88.6ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`permalink` = 'tupperware' LIMIT 1[0m
+  [1m[36mSpree::Store Load (9.7ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE (url like '%localhost%') ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  [1m[36mSpree::Store Load (2.3ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE `spree_stores`.`default` = TRUE ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  [1m[35m (48.7ms)[0m  [1m[34mSELECT MAX(`spree_option_types`.`updated_at`) FROM `spree_option_types`[0m
+  [1m[36mSpree::OptionType Load (3.6ms)[0m  [1m[34mSELECT `spree_option_types`.* FROM `spree_option_types` ORDER BY `spree_option_types`.`position` ASC[0m
+Processing by Spree::TaxonsController#show as HTML
+  Parameters: {"id"=>"tupperware"}
+  [1m[36mSpree::Order Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM `spree_orders` WHERE `spree_orders`.`token` = 'xTfVeNCMOyY4tGNApU3hVg1602703546241' LIMIT 1[0m
+  [1m[36mSpree::Preference Load (46.9ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/locale' LIMIT 1[0m
+  [1m[36mSpree::OptionValue Load (3.6ms)[0m  [1m[34mSELECT `spree_option_values`.* FROM `spree_option_values` WHERE `spree_option_values`.`option_type_id` = 1 ORDER BY `spree_option_values`.`position` ASC[0m
+  [1m[36mSpree::Preference Load (2.3ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/products_filters' LIMIT 1[0m
+  [1m[36mSpree::Taxon Load (1.7ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`permalink` = 'tupperware' LIMIT 1[0m
+[31mUnpermitted parameter: :id[0m
+  [1m[36mSpree::Store Load (1.5ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE (url like '%localhost%') ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  [1m[36mSpree::Store Load (0.9ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE `spree_stores`.`default` = TRUE ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT MAX(`spree_option_types`.`updated_at`) FROM `spree_option_types`[0m
+  [1m[36mSpree::OptionType Load (4.1ms)[0m  [1m[34mSELECT `spree_option_types`.* FROM `spree_option_types` ORDER BY `spree_option_types`.`position` ASC[0m
+  [1m[36mSpree::OptionValue Load (0.9ms)[0m  [1m[34mSELECT `spree_option_values`.* FROM `spree_option_values` WHERE `spree_option_values`.`option_type_id` = 1 ORDER BY `spree_option_values`.`position` ASC[0m
+  [1m[36mSpree::Preference Load (1.6ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/products_filters' LIMIT 1[0m
+[31mUnpermitted parameter: :id[0m
+  Couldn't find template for digesting: templates/template
+  [1m[36mSpree::Preference Load (3.8ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/currency' LIMIT 1[0m
+  [1m[36mSpree::Preference Load (3.6ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/currency' LIMIT 1[0m
+  [1m[36mSpree::Taxon Load (4.5ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE Spree::OptionType Load (0.0ms)[0m  [1m[34mSELECT `spree_option_types`.* FROM `spree_option_types` ORDER BY `spree_option_types`.`position` ASC[0m
+  [1m[36mSpree::Taxon Load (5.1ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE Spree::OptionType Load (0.0ms)[0m  [1m[34mSELECT `spree_option_types`.* FROM `spree_option_types` ORDER BY `spree_option_types`.`position` ASC[0m
+  [1m[36mSpree::Preference Load (26.1ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/products_per_page' LIMIT 1[0m
+  [1m[36mSpree::Preference Load (14.5ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/products_per_page' LIMIT 1[0m
+  [1m[36mSpree::Taxon Load (18.1ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`id` = 1[0m
+  [1m[36mSpree::Taxon Load (18.3ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`id` = 1[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT `spree_taxons`.`id` FROM `spree_taxons` WHERE `spree_taxons`.`lft` >= 1 AND `spree_taxons`.`lft` < 6 ORDER BY `spree_taxons`.`lft` ASC[0m
+  [1m[35m (13.0ms)[0m  [1m[34mSELECT `spree_taxons`.`id` FROM `spree_taxons` WHERE `spree_taxons`.`lft` >= 1 AND `spree_taxons`.`lft` < 6 ORDER BY `spree_taxons`.`lft` ASC[0m
+  [1m[36mSpree::Preference Load (0.7ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/show_products_without_price' LIMIT 1[0m
+  [1m[36mSpree::Preference Load (22.7ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/show_products_without_price' LIMIT 1[0m
+  [1m[36mSpree::Preference Load (2.5ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/layout' LIMIT 1[0m
+  Rendering spree/taxons/show.html.erb within spree/layouts/spree_application
+  [1m[36mSpree::Taxon Load (8.6ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`lft` <= 1 AND `spree_taxons`.`rgt` >= 6 AND (`spree_taxons`.`id` != 1) AND `spree_taxons`.`parent_id` IS NOT NULL ORDER BY `spree_taxons`.`lft` ASC[0m
+  ↳ app/views/spree/taxons/show.html.erb:3:in `_2a73424a1f125e8e2b6e7c3460bbcef6'
+[31mUnpermitted parameter: :id[0m
+[31mUnpermitted parameter: :id[0m
+  [1m[36mSpree::Preference Load (62.9ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/layout' LIMIT 1[0m
+  Rendering spree/taxons/show.html.erb within spree/layouts/spree_application
+  [1m[36mSpree::Taxon Load (5.7ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`lft` <= 1 AND `spree_taxons`.`rgt` >= 6 AND (`spree_taxons`.`id` != 1) AND `spree_taxons`.`parent_id` IS NOT NULL ORDER BY `spree_taxons`.`lft` ASC[0m
+  ↳ app/views/spree/taxons/show.html.erb:3:in `_2a73424a1f125e8e2b6e7c3460bbcef6'
+[31mUnpermitted parameter: :id[0m
+[31mUnpermitted parameter: :id[0m
+  [1m[36mSpree::TaxonImage Load (8.0ms)[0m  [1m[34mSELECT `spree_assets`.* FROM `spree_assets` WHERE `spree_assets`.`type` = 'Spree::TaxonImage' AND `spree_assets`.`viewable_id` = 1 AND `spree_assets`.`viewable_type` = 'Spree::Taxon' LIMIT 1[0m
+  ↳ app/views/spree/taxons/_header.html.erb:8:in `block in _913bf3faa1372e1498ac8873c0aad0fb'
+  Rendered spree/taxons/_header.html.erb (Duration: 166.4ms | Allocations: 14109)
+  [1m[36mSpree::TaxonImage Load (10.0ms)[0m  [1m[34mSELECT `spree_assets`.* FROM `spree_assets` WHERE `spree_assets`.`type` = 'Spree::TaxonImage' AND `spree_assets`.`viewable_id` = 1 AND `spree_assets`.`viewable_type` = 'Spree::Taxon' LIMIT 1[0m
+[31mUnpermitted parameter: :id[0m
+  ↳ app/views/spree/taxons/_header.html.erb:8:in `block in _913bf3faa1372e1498ac8873c0aad0fb'
+  Rendered spree/taxons/_header.html.erb (Duration: 92.3ms | Allocations: 7275)
+[31mUnpermitted parameter: :id[0m
+  [1m[36mSpree::Taxon Exists? (14.4ms)[0m  [1m[34mSELECT 1 AS one FROM `spree_taxons` WHERE `spree_taxons`.`parent_id` = 1 LIMIT 1[0m
+  ↳ app/views/spree/taxons/_subcategories.html.erb:3:in `block in _f379a0b42e5479c1597c1f9165de7c98'
+  [1m[36mSpree::Taxon Exists? (11.9ms)[0m  [1m[34mSELECT 1 AS one FROM `spree_taxons` WHERE `spree_taxons`.`parent_id` = 1 LIMIT 1[0m
+  ↳ app/views/spree/taxons/_subcategories.html.erb:3:in `block in _f379a0b42e5479c1597c1f9165de7c98'
+  [1m[36mSpree::Taxon Load (3.8ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`parent_id` = 1 AND `spree_taxons`.`hide_from_nav` = FALSE ORDER BY `spree_taxons`.`lft` ASC[0m
+  ↳ app/views/spree/taxons/_subcategories.html.erb:7:in `block (2 levels) in _f379a0b42e5479c1597c1f9165de7c98'
+  Rendered spree/taxons/_subcategories.html.erb (Duration: 36.7ms | Allocations: 7301)
+  [1m[36mSpree::Taxon Load (9.2ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`parent_id` = 1 AND `spree_taxons`.`hide_from_nav` = FALSE ORDER BY `spree_taxons`.`lft` ASC[0m
+  ↳ app/views/spree/taxons/_subcategories.html.erb:7:in `block (2 levels) in _f379a0b42e5479c1597c1f9165de7c98'
+  Rendered spree/taxons/_subcategories.html.erb (Duration: 31.7ms | Allocations: 5503)
+  Rendering spree/products/index.html.erb
+  Rendering spree/products/index.html.erb
+[31mUnpermitted parameter: :id[0m
+[31mUnpermitted parameter: :id[0m
+  [1m[36mSpree::Product Exists? (119.5ms)[0m  [1m[34mSELECT DISTINCT spree_products.*, spree_products_taxons.position FROM `spree_products` INNER JOIN `spree_variants` ON `spree_variants`.`deleted_at` IS NULL AND `spree_variants`.`is_master` = TRUE AND `spree_variants`.`product_id` = `spree_products`.`id` INNER JOIN `spree_prices` ON `spree_prices`.`deleted_at` IS NULL AND `spree_prices`.`variant_id` = `spree_variants`.`id` INNER JOIN `spree_products_taxons` ON `spree_products_taxons`.`product_id` = `spree_products`.`id` WHERE `spree_products`.`deleted_at` IS NULL AND (`spree_products`.discontinue_on IS NULL or `spree_products`.discontinue_on >= '2020-10-14 19:25:46.828295') AND (`spree_products`.available_on <= '2020-10-14 19:25:46.828259') AND `spree_products_taxons`.`taxon_id` IN (1, 2, 3) AND (`spree_products`.deleted_at IS NULL or `spree_products`.deleted_at >= '2020-10-14 19:25:47.003338') AND (`spree_products`.discontinue_on IS NULL or `spree_products`.discontinue_on >= '2020-10-14 19:25:47.008102') AND (`spree_products`.available_on <= '2020-10-14 19:25:47.008067') AND (`spree_products`.discontinue_on IS NULL or `spree_products`.discontinue_on >= '2020-10-14 19:25:47.009381') AND (`spree_products`.available_on <= '2020-10-14 19:25:47.009350') AND (spree_prices.amount IS NOT NULL) AND `spree_prices`.`currency` = 'IDR' LIMIT 1 OFFSET 0[0m
+  ↳ app/views/spree/products/index.html.erb:2:in `_228d2d6a13d94e74d3bc11811f455d5b'
+  [1m[36mSpree::Product Exists? (127.7ms)[0m  [1m[34mSELECT DISTINCT spree_products.*, spree_products_taxons.position FROM `spree_products` INNER JOIN `spree_variants` ON `spree_variants`.`deleted_at` IS NULL AND `spree_variants`.`is_master` = TRUE AND `spree_variants`.`product_id` = `spree_products`.`id` INNER JOIN `spree_prices` ON `spree_prices`.`deleted_at` IS NULL AND `spree_prices`.`variant_id` = `spree_variants`.`id` INNER JOIN `spree_products_taxons` ON `spree_products_taxons`.`product_id` = `spree_products`.`id` WHERE `spree_products`.`deleted_at` IS NULL AND (`spree_products`.discontinue_on IS NULL or `spree_products`.discontinue_on >= '2020-10-14 19:25:46.825692') AND (`spree_products`.available_on <= '2020-10-14 19:25:46.825522') AND `spree_products_taxons`.`taxon_id` IN (1, 2, 3) AND (`spree_products`.deleted_at IS NULL or `spree_products`.deleted_at >= '2020-10-14 19:25:47.037503') AND (`spree_products`.discontinue_on IS NULL or `spree_products`.discontinue_on >= '2020-10-14 19:25:47.055594') AND (`spree_products`.available_on <= '2020-10-14 19:25:47.055561') AND (`spree_products`.discontinue_on IS NULL or `spree_products`.discontinue_on >= '2020-10-14 19:25:47.056690') AND (`spree_products`.available_on <= '2020-10-14 19:25:47.056661') AND (spree_prices.amount IS NOT NULL) AND `spree_prices`.`currency` = 'IDR' LIMIT 1 OFFSET 0[0m
+  ↳ app/views/spree/products/index.html.erb:2:in `_6da003df496ddd5e5f48a8d666c78913'
+  Rendered spree/products/_filter_and_sort_mobile_buttons.html.erb (Duration: 94.7ms | Allocations: 5841)
+  Rendered spree/products/_filter_and_sort_mobile_buttons.html.erb (Duration: 102.2ms | Allocations: 7430)
+  Rendered spree/products/_sort_desktop.html.erb (Duration: 50.7ms | Allocations: 14384)
+  Rendered spree/products/_sort_desktop.html.erb (Duration: 328.7ms | Allocations: 16441)
+  Rendered spree/shared/_option_values.html.erb (Duration: 4.2ms | Allocations: 886)
+  Rendered spree/shared/_option_values.html.erb (Duration: 5.6ms | Allocations: 999)
+  [1m[36mSpree::Preference Load (1.3ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/additional_filters_partials' LIMIT 1[0m
+  ↳ app/views/spree/products/_filters_desktop.html.erb:57:in `block in _5299c56bf9e907f647a91544441aa5fd'
+  Rendered spree/products/_filters_desktop.html.erb (Duration: 219.4ms | Allocations: 26066)
+  Rendered spree/products/_no_results_with_filters.html.erb (Duration: 791.9ms | Allocations: 50889)
+  [1m[36mSpree::Preference Load (1.0ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/additional_filters_partials' LIMIT 1[0m
+  ↳ app/views/spree/products/_filters_desktop.html.erb:57:in `block in _5299c56bf9e907f647a91544441aa5fd'
+  Rendered spree/products/_filters_desktop.html.erb (Duration: 217.7ms | Allocations: 26277)
+  Rendered spree/products/_no_results_with_filters.html.erb (Duration: 797.7ms | Allocations: 52307)
+  Rendered spree/shared/_option_values.html.erb (Duration: 7.2ms | Allocations: 2078)
+  Rendered spree/shared/_option_values.html.erb (Duration: 3.0ms | Allocations: 2071)
+  Rendered spree/products/_filters_mobile.html.erb (Duration: 77.8ms | Allocations: 19722)
+  Rendered spree/products/_filters_mobile.html.erb (Duration: 96.5ms | Allocations: 24067)
+  Rendered spree/products/_sort_mobile.html.erb (Duration: 16.0ms | Allocations: 4167)
+  Rendered spree/products/index.html.erb (Duration: 1680.1ms | Allocations: 107823)
+  Rendered spree/products/_sort_mobile.html.erb (Duration: 21.2ms | Allocations: 5655)
+  Rendered spree/taxons/show.html.erb within spree/layouts/spree_application (Duration: 2195.6ms | Allocations: 153206)
+  Rendered spree/products/index.html.erb (Duration: 1679.9ms | Allocations: 107898)
+  Rendered spree/taxons/show.html.erb within spree/layouts/spree_application (Duration: 2105.1ms | Allocations: 145183)
+  [1m[36mSpree::Preference Load (5.0ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/always_put_site_name_in_title' LIMIT 1[0m
+  ↳ app/views/spree/shared/_head.html.erb:1:in `_a0a456840aae0daf89fce72703485e95'
+  [1m[36mSpree::Preference Load (2.0ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/always_put_site_name_in_title' LIMIT 1[0m
+  [1m[36mSpree::Preference Load (1.1ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/title_site_name_separator' LIMIT 1[0m
+  ↳ app/views/spree/shared/_head.html.erb:1:in `_a0a456840aae0daf89fce72703485e95'
+  ↳ app/views/spree/shared/_head.html.erb:1:in `_a0a456840aae0daf89fce72703485e95'
+  [1m[36mSpree::Preference Load (1.6ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/title_site_name_separator' LIMIT 1[0m
+  ↳ app/views/spree/shared/_head.html.erb:1:in `_a0a456840aae0daf89fce72703485e95'
+  Rendered spree/shared/_head.html.erb (Duration: 476.0ms | Allocations: 141112)
+Completed 500 Internal Server Error in 4369ms (ActiveRecord: 1030.2ms | Allocations: 406195)
+
+
+  
+ActionView::Template::Error (can't add a new key into hash during iteration):
+    4: <%== meta_data_tags %>
+    5: <%= canonical_tag(current_store.url) %>
+    6: <%= favicon_link_tag 'favicon.ico' %>
+    7: <%= stylesheet_link_tag 'spree/frontend/all', media: 'screen', 'data-turbolinks-track': 'reload' %>
+    8: <%= csrf_meta_tags %>
+    9: <%= render 'spree/shared/paths' %>
+   10: <%= javascript_include_tag 'spree/frontend/all', defer: true, 'data-turbolinks-track': 'reload' %>
+  
+app/views/spree/shared/_head.html.erb:7:in `_a0a456840aae0daf89fce72703485e95'
+app/views/spree/layouts/spree_application.html.erb:8:in `_cd7c632339ed6b96075923c3875761fb'
+  [1m[36mSpree::Preference Load (51.3ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/admin_path' LIMIT 1[0m
+  ↳ app/views/spree/shared/_head.html.erb:9:in `_a0a456840aae0daf89fce72703485e95'
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_core-4.1.10/app/views/spree/shared/_paths.html.erb (Duration: 56.5ms | Allocations: 5952)
+  Rendered spree/shared/_head.html.erb (Duration: 2676.5ms | Allocations: 1283113)
+  [1m[36mSpree::Preference Load (1.3ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/logo' LIMIT 1[0m
+  ↳ app/views/spree/shared/_header.html.erb:2:in `_058c3e6f693ae88a6b42f1f70c62203f'
+  Rendered spree/shared/_main_nav_bar.html.erb (Duration: 118.2ms | Allocations: 11263)
+  Rendered spree/shared/_search.html.erb (Duration: 51.0ms | Allocations: 3954)
+  Rendered spree/shared/_cart.html.erb (Duration: 19.5ms | Allocations: 2223)
+  Rendered spree/shared/_cart.html.erb (Duration: 16.2ms | Allocations: 3562)
+  Rendered spree/shared/_nav_bar.html.erb (Duration: 175.2ms | Allocations: 17818)
+  Rendered spree/shared/_mobile_navigation.html.erb (Duration: 144.1ms | Allocations: 19136)
+  Rendered spree/shared/_header.html.erb (Duration: 479.2ms | Allocations: 53318)
+  Rendered spree/shared/_copyright.html.erb (Duration: 12.8ms | Allocations: 1632)
+  Rendered spree/shared/_footer.html.erb (Duration: 22.0ms | Allocations: 3914)
+  Rendered spree/shared/_translations.html.erb (Duration: 12.5ms | Allocations: 1520)
+Completed 200 OK in 6295ms (Views: 5065.0ms | ActiveRecord: 650.9ms | Allocations: 1553489)
+
+
+Started GET "/api_tokens" for ::1 at 2020-10-15 02:26:45 +0700
+Started GET "/account_link" for ::1 at 2020-10-15 02:26:46 +0700
+Processing by Spree::StoreController#api_tokens as */*
+  [1m[36mSpree::Preference Load (45.7ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/locale' LIMIT 1[0m
+  [1m[36mSpree::Store Load (10.9ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE (url like '%localhost%') ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  [1m[36mSpree::Store Load (7.2ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE `spree_stores`.`default` = TRUE ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  [1m[36mSpree::Order Load (33.0ms)[0m  [1m[34mSELECT `spree_orders`.* FROM `spree_orders` WHERE `spree_orders`.`completed_at` IS NULL AND `spree_orders`.`currency` = 'IDR' AND `spree_orders`.`token` = 'xTfVeNCMOyY4tGNApU3hVg1602703546241' AND `spree_orders`.`store_id` = 1 LIMIT 1[0m
+Completed 200 OK in 296ms (Views: 0.4ms | ActiveRecord: 98.4ms | Allocations: 30801)
+
+
+Started GET "/cart_link" for ::1 at 2020-10-15 02:26:47 +0700
+Processing by Spree::StoreController#account_link as */*
+  [1m[36mSpree::Preference Load (0.7ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/locale' LIMIT 1[0m
+  Rendered spree/shared/_link_to_account.html.erb (Duration: 3.8ms | Allocations: 694)
+Completed 200 OK in 28ms (Views: 22.2ms | ActiveRecord: 0.7ms | Allocations: 3196)
+
+
+Processing by Spree::StoreController#cart_link as */*
+  [1m[36mSpree::Preference Load (0.6ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/locale' LIMIT 1[0m
+  [1m[36mSpree::Store Load (0.7ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE (url like '%localhost%') ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  ↳ app/views/spree/shared/_link_to_cart.html.erb:1:in `_e6220b163230a624848dbfeae201b015'
+  [1m[36mSpree::Store Load (1.4ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE `spree_stores`.`default` = TRUE ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  ↳ app/views/spree/shared/_link_to_cart.html.erb:1:in `_e6220b163230a624848dbfeae201b015'
+  [1m[36mSpree::Order Load (0.7ms)[0m  [1m[34mSELECT `spree_orders`.* FROM `spree_orders` WHERE `spree_orders`.`completed_at` IS NULL AND `spree_orders`.`currency` = 'IDR' AND `spree_orders`.`token` = 'xTfVeNCMOyY4tGNApU3hVg1602703546241' AND `spree_orders`.`store_id` = 1 LIMIT 1[0m
+  ↳ app/views/spree/shared/_link_to_cart.html.erb:1:in `_e6220b163230a624848dbfeae201b015'
+  Rendered spree/shared/_cart.html.erb (Duration: 14.4ms | Allocations: 3573)
+  Rendered spree/shared/_cart.html.erb (Duration: 16.4ms | Allocations: 3552)
+  Rendered spree/shared/_link_to_cart.html.erb (Duration: 48.1ms | Allocations: 10834)
+  Couldn't find template for digesting: spree/store/cart_link
+Completed 200 OK in 90ms (Views: 48.0ms | ActiveRecord: 3.4ms | Allocations: 15006)
+
+
+Started GET "/t/tupperware?limitededition=1&menu_open=1" for ::1 at 2020-10-15 02:26:50 +0700
+Processing by Spree::TaxonsController#show as HTML
+  Parameters: {"limitededition"=>"1", "menu_open"=>"1", "id"=>"tupperware"}
+  [1m[36mSpree::Preference Load (0.8ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/locale' LIMIT 1[0m
+  [1m[36mSpree::Taxon Load (1.8ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`permalink` = 'tupperware' LIMIT 1[0m
+  [1m[36mSpree::Store Load (0.6ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE (url like '%localhost%') ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  [1m[36mSpree::Store Load (3.4ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE `spree_stores`.`default` = TRUE ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT MAX(`spree_option_types`.`updated_at`) FROM `spree_option_types`[0m
+  [1m[36mSpree::OptionType Load (5.9ms)[0m  [1m[34mSELECT `spree_option_types`.* FROM `spree_option_types` ORDER BY `spree_option_types`.`position` ASC[0m
+  [1m[36mSpree::OptionValue Load (2.0ms)[0m  [1m[34mSELECT `spree_option_values`.* FROM `spree_option_values` WHERE `spree_option_values`.`option_type_id` = 1 ORDER BY `spree_option_values`.`position` ASC[0m
+  [1m[36mSpree::Preference Load (3.8ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/products_filters' LIMIT 1[0m
+[31mUnpermitted parameters: :menu_open, :id[0m
+  [1m[36mSpree::Preference Load (1.1ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/currency' LIMIT 1[0m
+  [1m[36mSpree::Taxon Load (4.5ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE Spree::OptionType Load (0.0ms)[0m  [1m[34mSELECT `spree_option_types`.* FROM `spree_option_types` ORDER BY `spree_option_types`.`position` ASC[0m
+  [1m[36mSpree::Preference Load (0.6ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/products_per_page' LIMIT 1[0m
+  [1m[36mSpree::Taxon Load (0.8ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`id` = 1[0m
+  [1m[35m (9.8ms)[0m  [1m[34mSELECT `spree_taxons`.`id` FROM `spree_taxons` WHERE `spree_taxons`.`lft` >= 1 AND `spree_taxons`.`lft` < 6 ORDER BY `spree_taxons`.`lft` ASC[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT `spree_option_values`.`option_type_id`) FROM `spree_option_values` WHERE `spree_option_values`.`id` = 1[0m
+  [1m[35m (9.6ms)[0m  [1m[34mSELECT DISTINCT `spree_products`.`id` FROM `spree_products` INNER JOIN `spree_variants` ON `spree_variants`.`deleted_at` IS NULL AND `spree_variants`.`is_master` = FALSE AND `spree_variants`.`product_id` = `spree_products`.`id` INNER JOIN `spree_option_value_variants` ON `spree_option_value_variants`.`variant_id` = `spree_variants`.`id` INNER JOIN `spree_option_values` ON `spree_option_values`.`id` = `spree_option_value_variants`.`option_value_id` WHERE `spree_products`.`deleted_at` IS NULL AND `spree_option_values`.`id` = 1 GROUP BY spree_products.id, spree_variants.id HAVING (COUNT(spree_option_values.option_type_id) = 1)[0m
+  [1m[36mSpree::Preference Load (0.6ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/show_products_without_price' LIMIT 1[0m
+  [1m[36mSpree::Preference Load (1.5ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/layout' LIMIT 1[0m
+  Rendering spree/taxons/show.html.erb within spree/layouts/spree_application
+  [1m[36mSpree::Taxon Load (3.6ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`lft` <= 1 AND `spree_taxons`.`rgt` >= 6 AND (`spree_taxons`.`id` != 1) AND `spree_taxons`.`parent_id` IS NOT NULL ORDER BY `spree_taxons`.`lft` ASC[0m
+  ↳ app/views/spree/taxons/show.html.erb:3:in `_2a73424a1f125e8e2b6e7c3460bbcef6'
+[31mUnpermitted parameters: :limitededition, :menu_open, :id[0m
+[31mUnpermitted parameters: :limitededition, :menu_open, :id[0m
+  [1m[36mSpree::TaxonImage Load (4.5ms)[0m  [1m[34mSELECT `spree_assets`.* FROM `spree_assets` WHERE `spree_assets`.`type` = 'Spree::TaxonImage' AND `spree_assets`.`viewable_id` = 1 AND `spree_assets`.`viewable_type` = 'Spree::Taxon' LIMIT 1[0m
+  ↳ app/views/spree/taxons/_header.html.erb:8:in `block in _913bf3faa1372e1498ac8873c0aad0fb'
+  Rendered spree/taxons/_header.html.erb (Duration: 15.5ms | Allocations: 2675)
+[31mUnpermitted parameters: :limitededition, :menu_open, :id[0m
+  [1m[36mSpree::Taxon Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM `spree_taxons` WHERE `spree_taxons`.`parent_id` = 1 LIMIT 1[0m
+  ↳ app/views/spree/taxons/_subcategories.html.erb:3:in `block in _f379a0b42e5479c1597c1f9165de7c98'
+  [1m[36mSpree::Taxon Load (1.5ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`parent_id` = 1 AND `spree_taxons`.`hide_from_nav` = FALSE ORDER BY `spree_taxons`.`lft` ASC[0m
+  ↳ app/views/spree/taxons/_subcategories.html.erb:7:in `block (2 levels) in _f379a0b42e5479c1597c1f9165de7c98'
+  Rendered spree/taxons/_subcategories.html.erb (Duration: 16.4ms | Allocations: 3724)
+  Rendering spree/products/index.html.erb
+[31mUnpermitted parameters: :menu_open, :id[0m
+  [1m[36mSpree::Product Exists? (6.0ms)[0m  [1m[34mSELECT DISTINCT spree_products.*, spree_products_taxons.position FROM `spree_products` INNER JOIN `spree_variants` ON `spree_variants`.`deleted_at` IS NULL AND `spree_variants`.`is_master` = TRUE AND `spree_variants`.`product_id` = `spree_products`.`id` INNER JOIN `spree_prices` ON `spree_prices`.`deleted_at` IS NULL AND `spree_prices`.`variant_id` = `spree_variants`.`id` INNER JOIN `spree_products_taxons` ON `spree_products_taxons`.`product_id` = `spree_products`.`id` WHERE `spree_products`.`deleted_at` IS NULL AND (`spree_products`.discontinue_on IS NULL or `spree_products`.discontinue_on >= '2020-10-14 19:26:51.592460') AND (`spree_products`.available_on <= '2020-10-14 19:26:51.592425') AND `spree_products_taxons`.`taxon_id` IN (1, 2, 3) AND `spree_products`.`id` = 1 AND (`spree_products`.deleted_at IS NULL or `spree_products`.deleted_at >= '2020-10-14 19:26:51.653211') AND (`spree_products`.discontinue_on IS NULL or `spree_products`.discontinue_on >= '2020-10-14 19:26:51.653802') AND (`spree_products`.available_on <= '2020-10-14 19:26:51.653778') AND (`spree_products`.discontinue_on IS NULL or `spree_products`.discontinue_on >= '2020-10-14 19:26:51.655443') AND (`spree_products`.available_on <= '2020-10-14 19:26:51.655412') AND (spree_prices.amount IS NOT NULL) AND `spree_prices`.`currency` = 'IDR' LIMIT 1 OFFSET 0[0m
+  ↳ app/views/spree/products/index.html.erb:2:in `_6da003df496ddd5e5f48a8d666c78913'
+  Rendered spree/products/_filter_and_sort_mobile_buttons.html.erb (Duration: 55.3ms | Allocations: 5024)
+  Rendered spree/products/_sort_desktop.html.erb (Duration: 113.2ms | Allocations: 5984)
+  Rendered spree/shared/_option_values.html.erb (Duration: 16.4ms | Allocations: 2158)
+  [1m[36mSpree::Preference Load (5.5ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/additional_filters_partials' LIMIT 1[0m
+  ↳ app/views/spree/products/_filters_desktop.html.erb:57:in `block in _5299c56bf9e907f647a91544441aa5fd'
+  Rendered spree/products/_filters_desktop.html.erb (Duration: 220.9ms | Allocations: 15113)
+  Rendered spree/products/_no_results_with_filters.html.erb (Duration: 396.7ms | Allocations: 28149)
+  Rendered spree/shared/_option_values.html.erb (Duration: 3.4ms | Allocations: 2091)
+  Rendered spree/products/_filters_mobile.html.erb (Duration: 96.7ms | Allocations: 12856)
+  Rendered spree/products/_sort_mobile.html.erb (Duration: 50.1ms | Allocations: 4116)
+  Rendered spree/products/index.html.erb (Duration: 564.9ms | Allocations: 48929)
+  Rendered spree/taxons/show.html.erb within spree/layouts/spree_application (Duration: 616.2ms | Allocations: 58983)
+  [1m[36mSpree::Preference Load (0.6ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/always_put_site_name_in_title' LIMIT 1[0m
+  ↳ app/views/spree/shared/_head.html.erb:1:in `_a0a456840aae0daf89fce72703485e95'
+  [1m[36mSpree::Preference Load (0.6ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/title_site_name_separator' LIMIT 1[0m
+  ↳ app/views/spree/shared/_head.html.erb:1:in `_a0a456840aae0daf89fce72703485e95'
+  [1m[36mSpree::Preference Load (0.8ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/admin_path' LIMIT 1[0m
+  ↳ app/views/spree/shared/_head.html.erb:9:in `_a0a456840aae0daf89fce72703485e95'
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_core-4.1.10/app/views/spree/shared/_paths.html.erb (Duration: 7.7ms | Allocations: 2788)
+  Rendered spree/shared/_head.html.erb (Duration: 2451.2ms | Allocations: 476651)
+  [1m[36mSpree::Preference Load (0.7ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/logo' LIMIT 1[0m
+  ↳ app/views/spree/shared/_header.html.erb:2:in `_058c3e6f693ae88a6b42f1f70c62203f'
+  Rendered spree/shared/_main_nav_bar.html.erb (Duration: 186.7ms | Allocations: 12100)
+  Rendered spree/shared/_search.html.erb (Duration: 71.4ms | Allocations: 5355)
+  Rendered spree/shared/_cart.html.erb (Duration: 43.3ms | Allocations: 3570)
+  Rendered spree/shared/_cart.html.erb (Duration: 27.0ms | Allocations: 3568)
+  Rendered spree/shared/_nav_bar.html.erb (Duration: 275.2ms | Allocations: 21486)
+  Rendered spree/shared/_mobile_navigation.html.erb (Duration: 290.9ms | Allocations: 20169)
+  Rendered spree/shared/_header.html.erb (Duration: 783.8ms | Allocations: 59565)
+  Rendered spree/shared/_copyright.html.erb (Duration: 33.0ms | Allocations: 2947)
+  Rendered spree/shared/_footer.html.erb (Duration: 51.7ms | Allocations: 5928)
+  Rendered spree/shared/_translations.html.erb (Duration: 28.0ms | Allocations: 2936)
+Completed 200 OK in 4110ms (Views: 3922.3ms | ActiveRecord: 75.6ms | Allocations: 638412)
+
+
+Started GET "/t/tupperware?limitededition=1%2C2&menu_open=1" for ::1 at 2020-10-15 02:27:11 +0700
+Processing by Spree::TaxonsController#show as HTML
+  Parameters: {"limitededition"=>"1,2", "menu_open"=>"1", "id"=>"tupperware"}
+  [1m[36mSpree::Preference Load (0.6ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/locale' LIMIT 1[0m
+  [1m[36mSpree::Taxon Load (12.5ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`permalink` = 'tupperware' LIMIT 1[0m
+  [1m[36mSpree::Store Load (10.0ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE (url like '%localhost%') ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  [1m[36mSpree::Store Load (1.7ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE `spree_stores`.`default` = TRUE ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT MAX(`spree_option_types`.`updated_at`) FROM `spree_option_types`[0m
+  [1m[36mSpree::OptionType Load (1.9ms)[0m  [1m[34mSELECT `spree_option_types`.* FROM `spree_option_types` ORDER BY `spree_option_types`.`position` ASC[0m
+  [1m[36mSpree::OptionValue Load (0.7ms)[0m  [1m[34mSELECT `spree_option_values`.* FROM `spree_option_values` WHERE `spree_option_values`.`option_type_id` = 1 ORDER BY `spree_option_values`.`position` ASC[0m
+  [1m[36mSpree::Preference Load (3.4ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/products_filters' LIMIT 1[0m
+[31mUnpermitted parameters: :menu_open, :id[0m
+  [1m[36mSpree::Preference Load (0.9ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/currency' LIMIT 1[0m
+  [1m[36mSpree::Taxon Load (6.1ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE Spree::OptionType Load (0.0ms)[0m  [1m[34mSELECT `spree_option_types`.* FROM `spree_option_types` ORDER BY `spree_option_types`.`position` ASC[0m
+  [1m[36mSpree::Preference Load (8.8ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/products_per_page' LIMIT 1[0m
+  [1m[36mSpree::Taxon Load (0.8ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`id` = 1[0m
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT `spree_taxons`.`id` FROM `spree_taxons` WHERE `spree_taxons`.`lft` >= 1 AND `spree_taxons`.`lft` < 6 ORDER BY `spree_taxons`.`lft` ASC[0m
+  [1m[35m (40.0ms)[0m  [1m[34mSELECT COUNT(DISTINCT `spree_option_values`.`option_type_id`) FROM `spree_option_values` WHERE `spree_option_values`.`id` IN (1, 2)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT DISTINCT `spree_products`.`id` FROM `spree_products` INNER JOIN `spree_variants` ON `spree_variants`.`deleted_at` IS NULL AND `spree_variants`.`is_master` = FALSE AND `spree_variants`.`product_id` = `spree_products`.`id` INNER JOIN `spree_option_value_variants` ON `spree_option_value_variants`.`variant_id` = `spree_variants`.`id` INNER JOIN `spree_option_values` ON `spree_option_values`.`id` = `spree_option_value_variants`.`option_value_id` WHERE `spree_products`.`deleted_at` IS NULL AND `spree_option_values`.`id` IN (1, 2) GROUP BY spree_products.id, spree_variants.id HAVING (COUNT(spree_option_values.option_type_id) = 1)[0m
+  [1m[36mSpree::Preference Load (2.3ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/show_products_without_price' LIMIT 1[0m
+  [1m[36mSpree::Preference Load (0.6ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/layout' LIMIT 1[0m
+  Rendering spree/taxons/show.html.erb within spree/layouts/spree_application
+  [1m[36mSpree::Taxon Load (0.7ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`lft` <= 1 AND `spree_taxons`.`rgt` >= 6 AND (`spree_taxons`.`id` != 1) AND `spree_taxons`.`parent_id` IS NOT NULL ORDER BY `spree_taxons`.`lft` ASC[0m
+  ↳ app/views/spree/taxons/show.html.erb:3:in `_2a73424a1f125e8e2b6e7c3460bbcef6'
+[31mUnpermitted parameters: :limitededition, :menu_open, :id[0m
+[31mUnpermitted parameters: :limitededition, :menu_open, :id[0m
+  [1m[36mSpree::TaxonImage Load (1.3ms)[0m  [1m[34mSELECT `spree_assets`.* FROM `spree_assets` WHERE `spree_assets`.`type` = 'Spree::TaxonImage' AND `spree_assets`.`viewable_id` = 1 AND `spree_assets`.`viewable_type` = 'Spree::Taxon' LIMIT 1[0m
+  ↳ app/views/spree/taxons/_header.html.erb:8:in `block in _913bf3faa1372e1498ac8873c0aad0fb'
+  Rendered spree/taxons/_header.html.erb (Duration: 7.3ms | Allocations: 2674)
+[31mUnpermitted parameters: :limitededition, :menu_open, :id[0m
+  [1m[36mSpree::Taxon Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM `spree_taxons` WHERE `spree_taxons`.`parent_id` = 1 LIMIT 1[0m
+  ↳ app/views/spree/taxons/_subcategories.html.erb:3:in `block in _f379a0b42e5479c1597c1f9165de7c98'
+  [1m[36mSpree::Taxon Load (2.0ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`parent_id` = 1 AND `spree_taxons`.`hide_from_nav` = FALSE ORDER BY `spree_taxons`.`lft` ASC[0m
+  ↳ app/views/spree/taxons/_subcategories.html.erb:7:in `block (2 levels) in _f379a0b42e5479c1597c1f9165de7c98'
+  Rendered spree/taxons/_subcategories.html.erb (Duration: 15.9ms | Allocations: 3724)
+  Rendering spree/products/index.html.erb
+[31mUnpermitted parameters: :menu_open, :id[0m
+  [1m[36mSpree::Product Exists? (1.9ms)[0m  [1m[34mSELECT DISTINCT spree_products.*, spree_products_taxons.position FROM `spree_products` INNER JOIN `spree_variants` ON `spree_variants`.`deleted_at` IS NULL AND `spree_variants`.`is_master` = TRUE AND `spree_variants`.`product_id` = `spree_products`.`id` INNER JOIN `spree_prices` ON `spree_prices`.`deleted_at` IS NULL AND `spree_prices`.`variant_id` = `spree_variants`.`id` INNER JOIN `spree_products_taxons` ON `spree_products_taxons`.`product_id` = `spree_products`.`id` WHERE `spree_products`.`deleted_at` IS NULL AND (`spree_products`.discontinue_on IS NULL or `spree_products`.discontinue_on >= '2020-10-14 19:27:12.860242') AND (`spree_products`.available_on <= '2020-10-14 19:27:12.860215') AND `spree_products_taxons`.`taxon_id` IN (1, 2, 3) AND `spree_products`.`id` = 1 AND (`spree_products`.deleted_at IS NULL or `spree_products`.deleted_at >= '2020-10-14 19:27:12.934344') AND (`spree_products`.discontinue_on IS NULL or `spree_products`.discontinue_on >= '2020-10-14 19:27:12.939394') AND (`spree_products`.available_on <= '2020-10-14 19:27:12.939363') AND (`spree_products`.discontinue_on IS NULL or `spree_products`.discontinue_on >= '2020-10-14 19:27:12.945212') AND (`spree_products`.available_on <= '2020-10-14 19:27:12.945144') AND (spree_prices.amount IS NOT NULL) AND `spree_prices`.`currency` = 'IDR' LIMIT 1 OFFSET 0[0m
+  ↳ app/views/spree/products/index.html.erb:2:in `_6da003df496ddd5e5f48a8d666c78913'
+  Rendered spree/products/_filter_and_sort_mobile_buttons.html.erb (Duration: 45.7ms | Allocations: 5023)
+  Rendered spree/products/_sort_desktop.html.erb (Duration: 55.2ms | Allocations: 5980)
+  Rendered spree/shared/_option_values.html.erb (Duration: 6.9ms | Allocations: 2163)
+  [1m[36mSpree::Preference Load (1.0ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/additional_filters_partials' LIMIT 1[0m
+  ↳ app/views/spree/products/_filters_desktop.html.erb:57:in `block in _5299c56bf9e907f647a91544441aa5fd'
+  Rendered spree/products/_filters_desktop.html.erb (Duration: 171.3ms | Allocations: 15113)
+  Rendered spree/products/_no_results_with_filters.html.erb (Duration: 288.8ms | Allocations: 28144)
+  Rendered spree/shared/_option_values.html.erb (Duration: 4.2ms | Allocations: 2096)
+  Rendered spree/products/_filters_mobile.html.erb (Duration: 97.4ms | Allocations: 12861)
+  Rendered spree/products/_sort_mobile.html.erb (Duration: 31.2ms | Allocations: 4116)
+  Rendered spree/products/index.html.erb (Duration: 435.0ms | Allocations: 48928)
+  Rendered spree/taxons/show.html.erb within spree/layouts/spree_application (Duration: 469.9ms | Allocations: 58973)
+  [1m[36mSpree::Preference Load (4.1ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/always_put_site_name_in_title' LIMIT 1[0m
+  ↳ app/views/spree/shared/_head.html.erb:1:in `_a0a456840aae0daf89fce72703485e95'
+  [1m[36mSpree::Preference Load (16.8ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/title_site_name_separator' LIMIT 1[0m
+  ↳ app/views/spree/shared/_head.html.erb:1:in `_a0a456840aae0daf89fce72703485e95'
+  [1m[36mSpree::Preference Load (2.3ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/admin_path' LIMIT 1[0m
+  ↳ app/views/spree/shared/_head.html.erb:9:in `_a0a456840aae0daf89fce72703485e95'
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_core-4.1.10/app/views/spree/shared/_paths.html.erb (Duration: 13.2ms | Allocations: 2790)
+  Rendered spree/shared/_head.html.erb (Duration: 2036.7ms | Allocations: 476697)
+  [1m[36mSpree::Preference Load (0.8ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/logo' LIMIT 1[0m
+  ↳ app/views/spree/shared/_header.html.erb:2:in `_058c3e6f693ae88a6b42f1f70c62203f'
+  Rendered spree/shared/_main_nav_bar.html.erb (Duration: 119.3ms | Allocations: 12097)
+  Rendered spree/shared/_search.html.erb (Duration: 75.7ms | Allocations: 5352)
+  Rendered spree/shared/_cart.html.erb (Duration: 47.5ms | Allocations: 3570)
+  Rendered spree/shared/_cart.html.erb (Duration: 45.4ms | Allocations: 3568)
+  Rendered spree/shared/_nav_bar.html.erb (Duration: 329.5ms | Allocations: 21483)
+  Rendered spree/shared/_mobile_navigation.html.erb (Duration: 264.9ms | Allocations: 20168)
+  Rendered spree/shared/_header.html.erb (Duration: 748.7ms | Allocations: 59556)
+  Rendered spree/shared/_copyright.html.erb (Duration: 14.5ms | Allocations: 2949)
+  Rendered spree/shared/_footer.html.erb (Duration: 20.6ms | Allocations: 5929)
+  Rendered spree/shared/_translations.html.erb (Duration: 16.1ms | Allocations: 2936)
+Completed 200 OK in 3515ms (Views: 3271.3ms | ActiveRecord: 130.2ms | Allocations: 635103)
+
+
+Started GET "/t/tupperware?limitededition=2&menu_open=1" for ::1 at 2020-10-15 02:27:19 +0700
+Processing by Spree::TaxonsController#show as HTML
+  Parameters: {"limitededition"=>"2", "menu_open"=>"1", "id"=>"tupperware"}
+  [1m[36mSpree::Preference Load (1.6ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/locale' LIMIT 1[0m
+  [1m[36mSpree::Taxon Load (3.6ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`permalink` = 'tupperware' LIMIT 1[0m
+  [1m[36mSpree::Store Load (0.7ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE (url like '%localhost%') ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  [1m[36mSpree::Store Load (9.0ms)[0m  [1m[34mSELECT `spree_stores`.* FROM `spree_stores` WHERE `spree_stores`.`default` = TRUE ORDER BY `spree_stores`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT MAX(`spree_option_types`.`updated_at`) FROM `spree_option_types`[0m
+  [1m[36mSpree::OptionType Load (9.0ms)[0m  [1m[34mSELECT `spree_option_types`.* FROM `spree_option_types` ORDER BY `spree_option_types`.`position` ASC[0m
+  [1m[36mSpree::OptionValue Load (0.7ms)[0m  [1m[34mSELECT `spree_option_values`.* FROM `spree_option_values` WHERE `spree_option_values`.`option_type_id` = 1 ORDER BY `spree_option_values`.`position` ASC[0m
+  [1m[36mSpree::Preference Load (3.0ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/products_filters' LIMIT 1[0m
+[31mUnpermitted parameters: :menu_open, :id[0m
+  [1m[36mSpree::Preference Load (0.7ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/currency' LIMIT 1[0m
+  [1m[36mSpree::Taxon Load (5.9ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE Spree::OptionType Load (0.0ms)[0m  [1m[34mSELECT `spree_option_types`.* FROM `spree_option_types` ORDER BY `spree_option_types`.`position` ASC[0m
+  [1m[36mSpree::Preference Load (22.8ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/products_per_page' LIMIT 1[0m
+  [1m[36mSpree::Taxon Load (0.7ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`id` = 1[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT `spree_taxons`.`id` FROM `spree_taxons` WHERE `spree_taxons`.`lft` >= 1 AND `spree_taxons`.`lft` < 6 ORDER BY `spree_taxons`.`lft` ASC[0m
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT `spree_option_values`.`option_type_id`) FROM `spree_option_values` WHERE `spree_option_values`.`id` = 2[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT DISTINCT `spree_products`.`id` FROM `spree_products` INNER JOIN `spree_variants` ON `spree_variants`.`deleted_at` IS NULL AND `spree_variants`.`is_master` = FALSE AND `spree_variants`.`product_id` = `spree_products`.`id` INNER JOIN `spree_option_value_variants` ON `spree_option_value_variants`.`variant_id` = `spree_variants`.`id` INNER JOIN `spree_option_values` ON `spree_option_values`.`id` = `spree_option_value_variants`.`option_value_id` WHERE `spree_products`.`deleted_at` IS NULL AND `spree_option_values`.`id` = 2 GROUP BY spree_products.id, spree_variants.id HAVING (COUNT(spree_option_values.option_type_id) = 1)[0m
+  [1m[36mSpree::Preference Load (0.7ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/show_products_without_price' LIMIT 1[0m
+  [1m[36mSpree::Preference Load (0.7ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/layout' LIMIT 1[0m
+  Rendering spree/taxons/show.html.erb within spree/layouts/spree_application
+  [1m[36mSpree::Taxon Load (3.6ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`lft` <= 1 AND `spree_taxons`.`rgt` >= 6 AND (`spree_taxons`.`id` != 1) AND `spree_taxons`.`parent_id` IS NOT NULL ORDER BY `spree_taxons`.`lft` ASC[0m
+  ↳ app/views/spree/taxons/show.html.erb:3:in `_2a73424a1f125e8e2b6e7c3460bbcef6'
+[31mUnpermitted parameters: :limitededition, :menu_open, :id[0m
+[31mUnpermitted parameters: :limitededition, :menu_open, :id[0m
+  [1m[36mSpree::TaxonImage Load (5.7ms)[0m  [1m[34mSELECT `spree_assets`.* FROM `spree_assets` WHERE `spree_assets`.`type` = 'Spree::TaxonImage' AND `spree_assets`.`viewable_id` = 1 AND `spree_assets`.`viewable_type` = 'Spree::Taxon' LIMIT 1[0m
+  ↳ app/views/spree/taxons/_header.html.erb:8:in `block in _913bf3faa1372e1498ac8873c0aad0fb'
+  Rendered spree/taxons/_header.html.erb (Duration: 11.8ms | Allocations: 2673)
+[31mUnpermitted parameters: :limitededition, :menu_open, :id[0m
+  [1m[36mSpree::Taxon Exists? (4.2ms)[0m  [1m[34mSELECT 1 AS one FROM `spree_taxons` WHERE `spree_taxons`.`parent_id` = 1 LIMIT 1[0m
+  ↳ app/views/spree/taxons/_subcategories.html.erb:3:in `block in _f379a0b42e5479c1597c1f9165de7c98'
+  [1m[36mSpree::Taxon Load (6.0ms)[0m  [1m[34mSELECT `spree_taxons`.* FROM `spree_taxons` WHERE `spree_taxons`.`parent_id` = 1 AND `spree_taxons`.`hide_from_nav` = FALSE ORDER BY `spree_taxons`.`lft` ASC[0m
+  ↳ app/views/spree/taxons/_subcategories.html.erb:7:in `block (2 levels) in _f379a0b42e5479c1597c1f9165de7c98'
+  Rendered spree/taxons/_subcategories.html.erb (Duration: 23.3ms | Allocations: 3724)
+  Rendering spree/products/index.html.erb
+[31mUnpermitted parameters: :menu_open, :id[0m
+  [1m[36mSpree::Product Exists? (4.0ms)[0m  [1m[34mSELECT DISTINCT spree_products.*, spree_products_taxons.position FROM `spree_products` INNER JOIN `spree_variants` ON `spree_variants`.`deleted_at` IS NULL AND `spree_variants`.`is_master` = TRUE AND `spree_variants`.`product_id` = `spree_products`.`id` INNER JOIN `spree_prices` ON `spree_prices`.`deleted_at` IS NULL AND `spree_prices`.`variant_id` = `spree_variants`.`id` INNER JOIN `spree_products_taxons` ON `spree_products_taxons`.`product_id` = `spree_products`.`id` WHERE `spree_products`.`deleted_at` IS NULL AND (`spree_products`.discontinue_on IS NULL or `spree_products`.discontinue_on >= '2020-10-14 19:27:20.281458') AND (`spree_products`.available_on <= '2020-10-14 19:27:20.281424') AND `spree_products_taxons`.`taxon_id` IN (1, 2, 3) AND 1=0 AND (`spree_products`.deleted_at IS NULL or `spree_products`.deleted_at >= '2020-10-14 19:27:20.324756') AND (`spree_products`.discontinue_on IS NULL or `spree_products`.discontinue_on >= '2020-10-14 19:27:20.327035') AND (`spree_products`.available_on <= '2020-10-14 19:27:20.326999') AND (`spree_products`.discontinue_on IS NULL or `spree_products`.discontinue_on >= '2020-10-14 19:27:20.329375') AND (`spree_products`.available_on <= '2020-10-14 19:27:20.329338') AND (spree_prices.amount IS NOT NULL) AND `spree_prices`.`currency` = 'IDR' LIMIT 1 OFFSET 0[0m
+  ↳ app/views/spree/products/index.html.erb:2:in `_6da003df496ddd5e5f48a8d666c78913'
+  Rendered spree/products/_filter_and_sort_mobile_buttons.html.erb (Duration: 31.1ms | Allocations: 5023)
+  Rendered spree/products/_sort_desktop.html.erb (Duration: 74.3ms | Allocations: 5976)
+  Rendered spree/shared/_option_values.html.erb (Duration: 6.2ms | Allocations: 2159)
+  [1m[36mSpree::Preference Load (0.6ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/frontend_configuration/additional_filters_partials' LIMIT 1[0m
+  ↳ app/views/spree/products/_filters_desktop.html.erb:57:in `block in _5299c56bf9e907f647a91544441aa5fd'
+  Rendered spree/products/_filters_desktop.html.erb (Duration: 164.9ms | Allocations: 15109)
+  Rendered spree/products/_no_results_with_filters.html.erb (Duration: 274.6ms | Allocations: 28136)
+  Rendered spree/shared/_option_values.html.erb (Duration: 4.5ms | Allocations: 2091)
+  Rendered spree/products/_filters_mobile.html.erb (Duration: 116.3ms | Allocations: 12856)
+  Rendered spree/products/_sort_mobile.html.erb (Duration: 32.9ms | Allocations: 4116)
+  Rendered spree/products/index.html.erb (Duration: 440.3ms | Allocations: 48912)
+  Rendered spree/taxons/show.html.erb within spree/layouts/spree_application (Duration: 490.7ms | Allocations: 58955)
+  [1m[36mSpree::Preference Load (3.3ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/always_put_site_name_in_title' LIMIT 1[0m
+  ↳ app/views/spree/shared/_head.html.erb:1:in `_a0a456840aae0daf89fce72703485e95'
+  [1m[36mSpree::Preference Load (1.9ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/title_site_name_separator' LIMIT 1[0m
+  ↳ app/views/spree/shared/_head.html.erb:1:in `_a0a456840aae0daf89fce72703485e95'
+  [1m[36mSpree::Preference Load (0.8ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/admin_path' LIMIT 1[0m
+  ↳ app/views/spree/shared/_head.html.erb:9:in `_a0a456840aae0daf89fce72703485e95'
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/spree_core-4.1.10/app/views/spree/shared/_paths.html.erb (Duration: 8.2ms | Allocations: 2790)
+  Rendered spree/shared/_head.html.erb (Duration: 2603.5ms | Allocations: 476737)
+  [1m[36mSpree::Preference Load (0.7ms)[0m  [1m[34mSELECT `spree_preferences`.* FROM `spree_preferences` WHERE `spree_preferences`.`key` = 'spree/app_configuration/logo' LIMIT 1[0m
+  ↳ app/views/spree/shared/_header.html.erb:2:in `_058c3e6f693ae88a6b42f1f70c62203f'
+  Rendered spree/shared/_main_nav_bar.html.erb (Duration: 172.8ms | Allocations: 12097)
+  Rendered spree/shared/_search.html.erb (Duration: 70.5ms | Allocations: 5352)
+  Rendered spree/shared/_cart.html.erb (Duration: 79.7ms | Allocations: 3570)
+  Rendered spree/shared/_cart.html.erb (Duration: 33.4ms | Allocations: 3568)
+  Rendered spree/shared/_nav_bar.html.erb (Duration: 353.3ms | Allocations: 21483)
+  Rendered spree/shared/_mobile_navigation.html.erb (Duration: 284.9ms | Allocations: 20168)
+  Rendered spree/shared/_header.html.erb (Duration: 843.2ms | Allocations: 59556)
+  Rendered spree/shared/_copyright.html.erb (Duration: 15.0ms | Allocations: 2949)
+  Rendered spree/shared/_footer.html.erb (Duration: 23.4ms | Allocations: 5929)
+  Rendered spree/shared/_translations.html.erb (Duration: 16.1ms | Allocations: 2936)
+Completed 200 OK in 4160ms (Views: 3960.7ms | ActiveRecord: 100.0ms | Allocations: 635091)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2020-10-15 02:29:50 +0700 ===
+- Goodbye!
+Exiting
+Terminate batch job (Y/N)? 
+Terminate batch job (Y/N)? 
