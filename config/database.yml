@@ -13,13 +13,13 @@ default: &default
   adapter: postgresql
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
-  host: localhost
+  username: itzpmeqoilqphx
+  password: da4033768100f22869dcc17a9b4a9f48dc9e2c1f33a3319721a7716355351f87
+  host: ec2-54-196-89-124.compute-1.amazonaws.com
 
 development:
   <<: *default
-  database: tokopc_development
+  database: d16i719rqutv65
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
