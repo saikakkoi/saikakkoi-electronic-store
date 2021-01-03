@@ -49,6 +49,3 @@ test:
 #
 production:
   <<: *default
-  database: tokopc_production
-  username: tokopc
-  password: <%= ENV['TOKOPC_DATABASE_PASSWORD'] %>
